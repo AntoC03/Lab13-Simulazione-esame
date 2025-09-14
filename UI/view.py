@@ -17,7 +17,7 @@ class View(ft.UserControl):
         # graphical elements
         self._title = None
         self._txt_name = None
-        self._txt_result = None
+        self.txt_result = None
 
     def load_interface(self):
         # title
@@ -25,7 +25,7 @@ class View(ft.UserControl):
         self._page.controls.append(self._title)
 
         self._ddAnno = ft.Dropdown(label="Anno")
-        self._controller.fillDDYear()
+
         self._btnCreaGrafo = ft.ElevatedButton(text="Vittorie Piloti", on_click=self._controller.handleCreaGrafo)
 
         cont = ft.Container(self._ddAnno, width=250, alignment=ft.alignment.top_left)
